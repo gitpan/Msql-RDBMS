@@ -1,0 +1,61 @@
+This is Msql::RDBMS, version 0.10. It will eventually be a complete
+relational database management system for Msql. It uses HTML forms
+as an interface.
+
+REQUIRED COMPONENTS
+===================
+
+You will need:
+CGI-modules-2.75.tar.gz
+CounterFile-0.6.pm.gz
+MsqlPerl-1.04.tar.gz
+
+All of which can be found on CPAN. Start at http://www.perl.com to make your
+way towards these modules. Here are the specific modules that are used:
+
+CGI
+CGI::Carp
+Msql
+File::CounterFile
+
+INSTALLATION
+============
+
+In order to install this, you should enter the top-level directory
+of the distribution, and issue the following commands:
+
+perl Makefile.PL
+make
+make install
+
+NOTES
+=====
+
+Documentation is contained within the module (RDBMS.pm) in pod format;
+when you issue the installation commands, you should then be able to type:
+
+man 3 Msql::RDBMS
+
+or just:
+
+man Msql::RDBMS
+
+to get the whole story.
+
+THE FUTURE
+==========
+
+Keep an eye on either:
+
+http://www.saturn.net/~bjepson/simple.html
+
+or 
+
+http://www.ids.net/~bjepson
+
+for late-breaking information and on-line demos (soon).
+
+Have fun,
+
+Brian Jepson
+bjepson@conan.ids.net

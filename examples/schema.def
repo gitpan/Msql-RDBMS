@@ -1,0 +1,58 @@
+#
+# schema.def
+#
+# Start a table definition with:
+#
+# table:table_name:table_description:view_file
+#
+# where:
+#
+# table_name        is the name of the table
+# table description is the description of the table
+# view_file         is an html file to use when viewing the file
+#                   as a result of a query.
+#
+# define each column with:
+# column_name:type:width:args:description:key_type:link_type:int1:int2:link
+#
+# where:
+#
+# column_name   is the name of the column
+# type          is a valid mSQL data type
+# width         is the width of the column, if applicable
+# args          additional args to the column definition, like 'not null'
+#                 or 'primary key'
+# description   is a short description of the table
+# key_type      type of key: PRIMARY, LABEL, FOREIGN
+# link_type     type of link: MAILTO, URL, IMG
+# int1          non-zero to prompt for this column in queries
+# int2          non-zero to display this column in query results
+# link          name of column to use as label of link
+#
+
+# the city table
+table:city:Cities:
+cty_name:char:30:not null:City Name:LABEL::1:1:
+cty_id:int::primary key:Unique Id:PRIMARY::0:0:
+
+# the Customer table
+#
+table:cust:Customers:cust.html
+#
+cst_id:int::primary key:Unique Id:PRIMARY::0:0:
+cst_name:char:36:not null:Customer Name:LABEL::1:1:
+cst_address1:char:36::Address Line One:::0:1:
+cst_address2:char:36::Address Line Two:::0:1:
+cty_id:int::not null:City Name:FOREIGN::1:1:
+cst_state:char:2::State:::1:1:
+cst_zip:char:11::Zip Code:::1:1:
+cst_phone:char:14::Phone:::0:1:
+cst_fax:char:14::Fax:::0:1:
+cst_email:char:64::E-mail Address::MAILTO:0:1:cst_email
+cst_url:char:128::Home Page::URL:0:0:cst_name
+cst_salary:real:::Salary:::1:1:
+
+
+
+
+
